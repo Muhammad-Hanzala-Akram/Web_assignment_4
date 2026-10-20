@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Slidedown</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <span class="wordmark">slidedown <em>— md → slides</em></span>
+  <span class="spacer"></span>
+  <button id="saveBtn" title="Save (Ctrl+S)">Save</button>
+  <span id="savedFlag">saved</span>
+</header>
+
+<main>
+  <div class="pane">
+    <div id="editorLabel">MARKDOWN — separate slides with a line containing ---</div>
+    <textarea id="editor" spellcheck="false"># Welcome to Slidedown
+
+Type Markdown on the left. Each slide is separated by a line with three dashes.
+
+---
+
+## How it works
+
+- Write `# Heading` for a title slide
+- Write `## Heading` for a section slide
+- Use `*italic*`, `**bold**`, and `` `code` ``
+- Press **Ctrl+S** to save to this browser
+
+---
+
+## Navigate
+
+Use the **Left** / **Right** buttons, or the arrow keys on your keyboard.
+
+Press **F11** to present full screen.</textarea>
+  </div>
+  <div class="pane">
+    <div id="previewLabel">PREVIEW</div>
+    <div id="presentWrap">
+      <div id="stage">
+        <div id="present"></div>
+        <div id="bar">
+          <button id="prevBtn" title="Previous (←)">&larr; Left</button>
+          <span id="counter">1 / 1</span>
+          <button id="nextBtn" title="Next (→)">Right &rarr;</button>
+          <button id="fsBtn" title="Full screen (F11)">Full Screen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>&larr; / &rarr; navigate · F11 full screen · Ctrl+S save</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
